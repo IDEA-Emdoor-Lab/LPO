@@ -32,8 +32,8 @@ we propose Linear Preference Optimization (LPO), a novel alignment framework fea
 We conducted comprehensive experiments across general text tasks, mathematics-specific domains, and text-to-speech (TTS) systems. The results demonstrate consistent improvements across all models. Below are the corresponding trained open-source models for each scenario.
 |Model Version| Huggingface |  Application |
 |-----------------------|---------|-----------------------------------|
-| General Text Task | [HuggingFace](https://huggingface.co/IDEA-Emdoor/Qwen2.5-7B-ExtVocab) | For Pretrain |
-| Math Model   | [HuggingFace](https://huggingface.co/IDEA-Emdoor/UniTTS-mixed-v0.1)   | Chinese TTS infernce/text dialogue/long-cot |
+| General Text Task | [HuggingFace](https://huggingface.co/IDEA-Emdoor/Qwen2.5-7B-ExtVocab) | Text Q&A |
+| Math Model   | [HuggingFace](https://huggingface.co/IDEA-Emdoor/UniTTS-mixed-v0.1)   | Math Q&A |
 | TTS Model   | [HuggingFace](https://huggingface.co/IDEA-Emdoor/UniTTS-mixed-v0.1)   | Chinese TTS infernce/text dialogue/long-cot |
 
 ## Install
@@ -93,8 +93,6 @@ LPO achieves a score of 88.86 on the GSM8K benchmark, representing a 4.71-point 
 ### RESULTS ON TEXT-TO-SPEECH TASKS
 The LPO algorithm demonstrates significant improvements in emotional expressiveness and fidelity compared to the SFT model, while exhibiting a slight decrease in stability. This outcome validates the effectiveness of the LPO algorithm in the field of speech generation.
 ![alt text](image.png)
-
-## References
 
 
 ## Citation

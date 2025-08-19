@@ -1,0 +1,531 @@
+15:4: not a valid test operator:  
+15:4: not a valid test operator: 12.5
+21:4: not a valid test operator: (
+21:4: not a valid test operator: 535.129.03
+/usr/local/lib/python3.10/dist-packages/transformer_engine/pytorch/attention.py:88: UserWarning: To use flash-attn v3, please use the following commands to install: 
+(1) pip install "git+https://github.com/Dao-AILab/flash-attention.git#egg=flashattn-hopper&subdirectory=hopper" 
+(2) python_path=`python -c "import site; print(site.getsitepackages()[0])"` 
+(3) mkdir -p $python_path/flashattn_hopper 
+(4) wget -P $python_path/flashattn_hopper https://raw.githubusercontent.com/Dao-AILab/flash-attention/main/hopper/flash_attn_interface.py
+  warnings.warn(
+/cognitive_comp/wangrui/codes/pai-megatron-patch/megatron/core/tensor_parallel/layers.py:279: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(
+/cognitive_comp/wangrui/codes/pai-megatron-patch/megatron/core/tensor_parallel/layers.py:295: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+/cognitive_comp/wangrui/codes/pai-megatron-patch/megatron/core/tensor_parallel/layers.py:390: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  def forward(
+/cognitive_comp/wangrui/codes/pai-megatron-patch/megatron/core/tensor_parallel/layers.py:429: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  def backward(ctx, grad_output):
+/usr/local/lib/python3.10/dist-packages/modelopt/torch/quantization/tensor_quant.py:84: FutureWarning: `torch.library.impl_abstract` was renamed to `torch.library.register_fake`. Please use that instead; we will remove `torch.library.impl_abstract` in a future version of PyTorch.
+  scaled_e4m3_abstract = torch.library.impl_abstract("trt::quantize_fp8")(
+/cognitive_comp/wangrui/codes/pai-megatron-patch/megatron_patch/model/llava/clip_encoder.py:26: UserWarning: The cvcuda environment does not exist. Install cvcuda and use it
+  warnings.warn("The cvcuda environment does not exist. Install cvcuda and use it")
+using world size: 1, data-parallel size: 1, context-parallel size: 1 tensor-model-parallel size: 1, pipeline-model-parallel size: 1 
+setting global batch size to 1
+WARNING: Setting args.overlap_p2p_comm to False since non-interleaved schedule does not support overlapping p2p communication
+accumulate and all-reduce gradients in fp32 for bfloat16 data type.
+using torch.bfloat16 for parameters ...
+------------------------ arguments ------------------------
+  accumulate_allreduce_grads_in_fp32 .............. True
+  adam_beta1 ...................................... 0.9
+  adam_beta2 ...................................... 0.999
+  adam_eps ........................................ 1e-08
+  adaptive_seq_len ................................ False
+  add_bias_attn_fc ................................ True
+  add_bias_linear ................................. False
+  add_bias_linear_fc .............................. True
+  add_position_embedding .......................... True
+  add_qkv_bias .................................... True
+  add_sft_loss .................................... False
+  adlr_autoresume ................................. False
+  adlr_autoresume_interval ........................ 1000
+  allow_missing_vision_projection_checkpoint ...... False
+  app_tag_run_name ................................ None
+  app_tag_run_version ............................. 0.0.0
+  apply_layernorm_1p .............................. False
+  apply_query_key_layer_scaling ................... False
+  apply_residual_connection_post_layernorm ........ False
+  apply_rope_fusion ............................... False
+  async_save ...................................... None
+  async_tensor_model_parallel_allreduce ........... False
+  attention_dropout ............................... 0.0
+  attention_head_type ............................. None
+  attention_softmax_in_fp32 ....................... False
+  auto_detect_ckpt_format ......................... False
+  barrier_with_L1_time ............................ True
+  bert_binary_head ................................ True
+  bert_embedder_type .............................. megatron
+  bert_load ....................................... None
+  beta ............................................ 0.2
+  bf16 ............................................ True
+  bias_dropout_fusion ............................. True
+  bias_gelu_fusion ................................ False
+  bias_swiglu_fusion .............................. False
+  biencoder_projection_dim ........................ 0
+  biencoder_shared_query_context_model ............ False
+  block_data_path ................................. None
+  calculate_per_token_loss ........................ False
+  check_for_nan_in_loss_and_grad .................. True
+  check_weight_hash_across_dp_replicas_interval ... None
+  ckpt_assume_constant_structure .................. False
+  ckpt_fully_parallel_load ........................ False
+  ckpt_fully_parallel_save ........................ True
+  ckpt_fully_parallel_save_deprecated ............. False
+  ckpt_step ....................................... None
+  classes_fraction ................................ 1.0
+  clip_grad ....................................... 1.0
+  clone_scatter_output_in_embedding ............... True
+  consumed_train_samples .......................... 0
+  consumed_valid_samples .......................... 0
+  context_parallel_size ........................... 1
+  convert_checkpoint_from_megatron_to_transformers  True
+  cpu_offloading .................................. False
+  cpu_offloading_num_layers ....................... 0
+  create_attention_mask_in_dataloader ............. True
+  cross_entropy_loss_fusion ....................... False
+  cvcuda_image_processing ......................... False
+  data_cache_path ................................. None
+  data_dir ........................................ None
+  data_parallel_random_init ....................... False
+  data_parallel_size .............................. 1
+  data_path ....................................... None
+  data_per_class_fraction ......................... 1.0
+  data_sharding ................................... True
+  dataloader_save ................................. None
+  dataloader_seq_length ........................... None
+  dataloader_type ................................. single
+  dataset ......................................... None
+  dataset_config .................................. None
+  ddp_average_in_collective ....................... False
+  ddp_bucket_size ................................. None
+  decoder_num_layers .............................. None
+  decoder_seq_length .............................. None
+  decoupled_lr .................................... None
+  decoupled_min_lr ................................ None
+  defer_embedding_wgrad_compute ................... False
+  delay_grad_reduce ............................... True
+  delay_param_gather .............................. False
+  deprecated_use_mcore_models ..................... True
+  deterministic_mode .............................. False
+  dino_bottleneck_size ............................ 256
+  dino_freeze_last_layer .......................... 1
+  dino_head_hidden_size ........................... 2048
+  dino_local_crops_number ......................... 10
+  dino_local_img_size ............................. 96
+  dino_norm_last_layer ............................ False
+  dino_teacher_temp ............................... 0.07
+  dino_warmup_teacher_temp ........................ 0.04
+  dino_warmup_teacher_temp_epochs ................. 30
+  disable_straggler_on_startup .................... False
+  disable_vision_class_token ...................... False
+  dist_ckpt_format ................................ torch_dist
+  dist_ckpt_strictness ............................ assume_ok_unexpected
+  distribute_saved_activations .................... False
+  distributed_backend ............................. nccl
+  distributed_timeout_minutes ..................... 10
+  embed_layernorm ................................. False
+  embedding_path .................................. None
+  empty_unused_memory_level ....................... 0
+  enable_one_logger ............................... True
+  enable_parallel_output .......................... True
+  enable_shared_expert ............................ False
+  encoder_num_layers .............................. 28
+  encoder_pipeline_model_parallel_size ............ None
+  encoder_seq_length .............................. 1
+  end_weight_decay ................................ 0.01
+  eod_mask_loss ................................... False
+  epochs .......................................... None
+  eval_dev ........................................ False
+  eval_fp32 ....................................... False
+  eval_interval ................................... 1000
+  eval_iters ...................................... 100
+  evidence_data_path .............................. None
+  exit_duration_in_mins ........................... None
+  exit_interval ................................... None
+  exit_on_missing_checkpoint ...................... False
+  exit_signal_handler ............................. False
+  expert_interval ................................. 2
+  expert_model_parallel_size ...................... 1
+  expert_tensor_parallelism ....................... False
+  extra_vocab_size ................................ 421
+  ffn_hidden_size ................................. 18944
+  finetune ........................................ False
+  fp16 ............................................ False
+  fp16_lm_cross_entropy ........................... False
+  fp32_residual_connection ........................ False
+  fp8 ............................................. None
+  fp8_amax_compute_algo ........................... most_recent
+  fp8_amax_history_len ............................ 1
+  fp8_interval .................................... 1
+  fp8_margin ...................................... 0
+  fp8_wgrad ....................................... True
+  freeze_clip_vision_tower ........................ False
+  freeze_llm ...................................... False
+  freeze_LM ....................................... False
+  freeze_ViT ...................................... False
+  gamma ........................................... 5.0
+  generation_length ............................... None
+  global_batch_size ............................... 1
+  glu_activation .................................. None
+  gradient_accumulation_fusion .................... True
+  group_query_attention ........................... True
+  head_lr_mult .................................... 1.0
+  hf_ckpt_path .................................... /cognitive_comp/ccnl_common_data/large/checkpoints/sft/lpo_test/20250604/qwen2.5/part1/checkpoint/finetune-mcore-qwen2.5-7B-lr-9e-6-minlr-5e-6-bs-2-gbs-128-seqlen-8192-pr-bf16-tp-2-pp-4-cp-1-ac-false-do-true-sp-true-ti-4200-wi-10/lpo_iter_0000500_hf
+  hidden_dropout .................................. 0.0
+  hidden_size ..................................... 3584
+  hybrid_attention_ratio .......................... 0.0
+  hybrid_mlp_ratio ................................ 0.0
+  hybrid_override_pattern ......................... None
+  hysteresis ...................................... 2
+  ict_head_size ................................... None
+  ict_load ........................................ None
+  image_aspect_ratio .............................. square
+  image_folder .................................... 
+  image_size ...................................... None
+  image_tag_type .................................. 
+  img_h ........................................... 224
+  img_w ........................................... 224
+  indexer_batch_size .............................. 128
+  indexer_log_interval ............................ 1000
+  inference_batch_times_seqlen_threshold .......... 512
+  init_method_std ................................. 0.02
+  init_method_xavier_uniform ...................... False
+  initial_loss_scale .............................. 4294967296
+  input_len ....................................... 1
+  intermediate_size ............................... None
+  is_average ...................................... False
+  iter_per_epoch .................................. 1250
+  keep_last ....................................... False
+  kv_channels ..................................... 128
+  kv_lora_rank .................................... None
+  label_smoothing ................................. 0.0
+  language_model_type ............................. None
+  lazy_mpu_init ................................... None
+  load ............................................ /cognitive_comp/ccnl_common_data/large/sft_audio_data/output/text/20250704/train/checkpoints/checkpoint/xpo-mcore-qwen2.5-7B-lr-2e-7-minlr-1e-7-bs-6-gbs-24-seqlen-4096-pr-bf16-tp-2-pp-4-cp-1-ac-false-do-true-sp-true-ti-12000-wi-66
+  local_rank ...................................... None
+  log_batch_size_to_tensorboard ................... False
+  log_interval .................................... 100
+  log_learning_rate_to_tensorboard ................ True
+  log_loss_scale_to_tensorboard ................... True
+  log_memory_to_tensorboard ....................... False
+  log_num_zeros_in_grad ........................... False
+  log_params_norm ................................. False
+  log_progress .................................... False
+  log_straggler ................................... False
+  log_throughput .................................. False
+  log_timers_to_tensorboard ....................... False
+  log_validation_ppl_to_tensorboard ............... False
+  log_world_size_to_tensorboard ................... False
+  logging_level ................................... None
+  loss_scale ...................................... None
+  loss_scale_window ............................... 1000
+  loss_type ....................................... lpo-ste
+  lr .............................................. None
+  lr_decay_iters .................................. None
+  lr_decay_samples ................................ None
+  lr_decay_style .................................. linear
+  lr_warmup_fraction .............................. None
+  lr_warmup_init .................................. 0.0
+  lr_warmup_iters ................................. 0
+  lr_warmup_samples ............................... 0
+  lr_wsd_decay_iters .............................. None
+  lr_wsd_decay_samples ............................ None
+  lr_wsd_decay_style .............................. exponential
+  make_vocab_size_divisible_by .................... 128
+  manual_gc ....................................... False
+  manual_gc_eval .................................. True
+  manual_gc_interval .............................. 0
+  mask_factor ..................................... 1.0
+  mask_prob ....................................... 0.15
+  mask_type ....................................... random
+  masked_softmax_fusion ........................... True
+  max_num_tiles ................................... 1
+  max_padding_length .............................. None
+  max_position_embeddings ......................... 131072
+  max_tokens_to_oom ............................... 12000
+  merge_file ...................................... None
+  micro_batch_size ................................ 1
+  min_loss_scale .................................. 1.0
+  min_lr .......................................... 0.0
+  mm_projector_type ............................... None
+  mm_use_im_patch_token ........................... False
+  mm_use_im_start_end ............................. False
+  mm_vision_select_layer .......................... None
+  mmap_bin_files .................................. True
+  mock_data ....................................... False
+  moe ............................................. False
+  moe_aux_loss_coeff .............................. 0.0
+  moe_eval_capacity_factor ........................ 1.0
+  moe_expert_capacity_factor ...................... None
+  moe_expert_parallel_size ........................ None
+  moe_extended_tp ................................. False
+  moe_ffn_hidden_size ............................. None
+  moe_grouped_gemm ................................ False
+  moe_input_feature_slicing ....................... False
+  moe_input_jitter_eps ............................ None
+  moe_layer_freq .................................. 1
+  moe_layer_recompute ............................. False
+  moe_loss_coeff .................................. 0.01
+  moe_min_capacity ................................ 4
+  moe_pad_expert_input_to_capacity ................ False
+  moe_per_layer_logging ........................... False
+  moe_router_load_balancing_type .................. aux_loss
+  moe_router_topk ................................. 2
+  moe_token_dispatcher_type ....................... allgather
+  moe_token_drop_policy ........................... probs
+  moe_topk ........................................ 1
+  moe_train_capacity_factor ....................... 1.0
+  moe_z_loss_coeff ................................ None
+  n_head_kv ....................................... None
+  nccl_communicator_config_path ................... None
+  no_load_optim ................................... None
+  no_load_rng ..................................... None
+  no_persist_layer_norm ........................... False
+  no_save_optim ................................... None
+  no_save_rng ..................................... None
+  norm_epsilon .................................... 1e-06
+  normalization ................................... RMSNorm
+  num_attention_heads ............................. 28
+  num_channels .................................... 3
+  num_classes ..................................... 1000
+  num_dataset_builder_threads ..................... 1
+  num_experts ..................................... None
+  num_fewshot ..................................... None
+  num_frames ...................................... 1
+  num_layers ...................................... 28
+  num_layers_per_virtual_pipeline_stage ........... None
+  num_query_groups ................................ 4
+  num_shared_experts .............................. None
+  num_workers ..................................... 2
+  one_logger_async ................................ False
+  one_logger_project .............................. megatron-lm
+  one_logger_run_name ............................. None
+  online_evaluation_config ........................ None
+  onnx_safe ....................................... None
+  openai_gelu ..................................... False
+  optimizer ....................................... adam
+  optimizer_offload_auto_threshold ................ 2147483648
+  optimizer_offload_chunk_size .................... 33554432
+  optimizer_offload_fraction ...................... 0.5
+  optimizer_offload_policy ........................ static
+  out_seq_length .................................. 1024
+  output_bert_embeddings .......................... False
+  overlap_grad_reduce ............................. False
+  overlap_p2p_comm ................................ False
+  overlap_param_gather ............................ False
+  override_opt_param_scheduler .................... False
+  params_dtype .................................... torch.bfloat16
+  patch_dim ....................................... 16
+  patch_size ...................................... 14
+  patch_tokenizer_type ............................ Qwen2Tokenizer
+  perform_initialization .......................... True
+  pipeline_model_parallel_size .................... 1
+  pipeline_model_parallel_split_rank .............. None
+  position_embedding_type ......................... rope
+  position_encoding_2d ............................ False
+  pretrained_checkpoint ........................... None
+  profile ......................................... False
+  profile_ranks ................................... [0]
+  profile_step_end ................................ 12
+  profile_step_start .............................. 10
+  prompt_path ..................................... None
+  q_lora_rank ..................................... None
+  qk_layernorm .................................... False
+  qk_nope_head_dim ................................ None
+  qk_rope_head_dim ................................ None
+  query_in_block_prob ............................. 0.1
+  r1 .............................................. 1.0
+  r2 .............................................. 0.8
+  rampup_batch_size ............................... None
+  rank ............................................ 0
+  recompute_granularity ........................... None
+  recompute_method ................................ None
+  recompute_num_layers ............................ None
+  repetition_penalty .............................. 1.1
+  reset_attention_mask ............................ False
+  reset_position_ids .............................. False
+  retriever_report_topk_accuracies ................ []
+  retriever_score_scaling ......................... False
+  retriever_seq_length ............................ 256
+  retro_add_retriever ............................. False
+  retro_attention_gate ............................ 1
+  retro_cyclic_train_iters ........................ None
+  retro_encoder_attention_dropout ................. 0.1
+  retro_encoder_hidden_dropout .................... 0.1
+  retro_encoder_layers ............................ 2
+  retro_num_neighbors ............................. 2
+  retro_num_retrieved_chunks ...................... 2
+  retro_project_dir ............................... None
+  retro_verify_neighbor_count ..................... True
+  rotary_base ..................................... 1000000
+  rotary_interleaved .............................. False
+  rotary_percent .................................. 1.0
+  rotary_scale_factor ............................. 1
+  rotary_scaling_factor ........................... 1
+  rotary_seq_len_interpolation_factor ............. None
+  router_type ..................................... topk
+  s3_cache_path ................................... None
+  sample_rate ..................................... 1.0
+  save ............................................ /cognitive_comp/ccnl_common_data/large/sft_audio_data/output/text/20250704/train/checkpoints/checkpoint/xpo-mcore-qwen2.5-7B-lr-2e-7-minlr-1e-7-bs-6-gbs-24-seqlen-4096-pr-bf16-tp-2-pp-4-cp-1-ac-false-do-true-sp-true-ti-12000-wi-66/iter_0001000_hf
+  save_interval ................................... 1
+  save_safetensors ................................ True
+  scatter_gather_tensors_in_pipeline .............. True
+  seed ............................................ 1234
+  seq_length ...................................... 1
+  sequence_parallel ............................... False
+  sgd_momentum .................................... 0.9
+  shared_moe_ffn_hidden_size ...................... None
+  short_seq_prob .................................. 0.1
+  skip_train ...................................... False
+  sliding_window .................................. None
+  source_seq_len .................................. None
+  spatial_merge_size .............................. 2
+  spec ............................................ None
+  special_tokens .................................. ['<image>']
+  split ........................................... None
+  squared_relu .................................... False
+  standalone_embedding_stage ...................... False
+  start_weight_decay .............................. 0.01
+  straggler_ctrlr_port ............................ 65535
+  straggler_minmax_count .......................... 1
+  swiglu .......................................... True
+  swin_backbone_type .............................. tiny
+  target_expert_model_parallel_size ............... 1
+  target_pipeline_model_parallel_size ............. 4
+  target_seq_len .................................. None
+  target_tensor_model_parallel_size ............... 2
+  task_list ....................................... all
+  temperature ..................................... 1.0
+  temporal_patch_size ............................. 2
+  tensor_model_parallel_size ...................... 1
+  tensorboard_dir ................................. None
+  tensorboard_log_interval ........................ 1
+  tensorboard_queue_size .......................... 1000
+  test_data_path .................................. None
+  test_mode ....................................... False
+  text_generate_gt_file ........................... 
+  text_generate_input_file ........................ 
+  text_generate_output_file ....................... 
+  tiktoken_num_special_tokens ..................... 1000
+  tiktoken_pattern ................................ None
+  tiktoken_special_tokens ......................... None
+  time ............................................ False
+  timing_log_level ................................ 0
+  timing_log_option ............................... minmax
+  titles_data_path ................................ None
+  tokenizer_model ................................. None
+  tokenizer_prompt_format ......................... None
+  tokenizer_type .................................. NullTokenizer
+  top_k ........................................... 0
+  top_p ........................................... 0.0
+  tp_comm_bulk_dgrad .............................. True
+  tp_comm_bulk_wgrad .............................. True
+  tp_comm_overlap ................................. False
+  tp_comm_overlap_ag .............................. True
+  tp_comm_overlap_cfg ............................. None
+  tp_comm_overlap_rs .............................. True
+  tp_comm_overlap_rs_dgrad ........................ False
+  tp_comm_split_ag ................................ True
+  tp_comm_split_rs ................................ True
+  train_data ...................................... None
+  train_data_path ................................. None
+  train_iters ..................................... None
+  train_mode ...................................... pretrain
+  train_samples ................................... None
+  transformer_impl ................................ transformer_engine
+  transformer_pipeline_model_parallel_size ........ 1
+  transformer_timers .............................. False
+  transformer_type ................................ megatron
+  tune_mm_mlp_adapter ............................. False
+  untie_embeddings_and_output_weights ............. True
+  use_alibi_mask .................................. False
+  use_checkpoint_args ............................. False
+  use_checkpoint_opt_param_scheduler .............. False
+  use_cpu_initialization .......................... None
+  use_dist_ckpt ................................... False
+  use_distributed_optimizer ....................... False
+  use_flash_attn .................................. False
+  use_legacy_models ............................... False
+  use_llama2_rotary_position_embeddings ........... False
+  use_mistral_rotary_position_embeddings .......... False
+  use_normhead .................................... False
+  use_one_sent_docs ............................... False
+  use_ring_exchange_p2p ........................... False
+  use_rotary_position_embeddings .................. True
+  use_te .......................................... False
+  use_thumbnail ................................... False
+  use_tiling ...................................... False
+  use_tp_pp_dp_mapping ............................ False
+  use_tutel ....................................... False
+  v_head_dim ...................................... None
+  valid_data ...................................... None
+  valid_data_path ................................. None
+  variable_seq_lengths ............................ False
+  verbosity ....................................... INFO
+  version ......................................... plain
+  virtual_pipeline_model_parallel_size ............ None
+  vision_backbone_type ............................ vit
+  vision_model_type ............................... clip
+  vision_pretraining .............................. False
+  vision_pretraining_type ......................... classify
+  vision_tower .................................... 
+  vocab_extra_ids ................................. 0
+  vocab_file ...................................... None
+  vocab_size ...................................... -1
+  wandb_exp_name .................................. 
+  wandb_project ................................... 
+  wandb_save_dir .................................. 
+  weight_decay .................................... 0.01
+  weight_decay_incr_style ......................... constant
+  wgrad_deferral_limit ............................ 0
+  world_size ...................................... 1
+  yaml_cfg ........................................ None
+  z_loss_weight ................................... 0.0
+-------------------- end of arguments ---------------------
+> building NullTokenizer tokenizer ...
+ > padded vocab (size: 0) with 0 dummy tokens (new size: 0)
+WARNING: one_logger package is required to enable e2e metrics tracking. please go to https://confluence.nvidia.com/display/MLWFO/Package+Repositories for details to install it
+> initializing torch distributed ...
+> initialized tensor model parallel with size 1
+> initialized pipeline model parallel with size 1
+> setting random seeds to 1234 ...
+> compiling dataset index builder ...
+make: Entering directory '/cognitive_comp/wangrui/codes/pai-megatron-patch/megatron/core/datasets'
+make: Nothing to be done for 'default'.
+make: Leaving directory '/cognitive_comp/wangrui/codes/pai-megatron-patch/megatron/core/datasets'
+>>> done with dataset index builder. Compilation time: 0.693 seconds
+WARNING: constraints for invoking optimized fused softmax kernel are not met. We default back to unfused kernel invocations.
+> compiling and loading fused kernels ...
+>>> done with compiling and loading fused kernels. Compilation time: 0.607 seconds
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.75s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.63s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.80s/it]
+> building Qwen2Tokenizer tokenizer ...
+building qwen2 model ...
+building qwen2 model in TE...
+/usr/local/lib/python3.10/dist-packages/transformer_engine/pytorch/attention.py:3256: UserWarning: window_size should be (-1, 0) or (>=0, 0) for attn_mask_type=causal
+  warnings.warn(
+/cognitive_comp/wangrui/codes/pai-megatron-patch/megatron/core/tensor_parallel/layers.py:799: UserWarning: `sequence_parallel` is set to `True`, but tensor model parallel size is 1. Disabling sequence parallel.
+  warnings.warn(
+Loading megatron params:   0%|          | 0/2 [00:00<?, ?it/s]load /cognitive_comp/ccnl_common_data/large/sft_audio_data/output/text/20250704/train/checkpoints/checkpoint/xpo-mcore-qwen2.5-7B-lr-2e-7-minlr-1e-7-bs-6-gbs-24-seqlen-4096-pr-bf16-tp-2-pp-4-cp-1-ac-false-do-true-sp-true-ti-12000-wi-66/iter_0001000/mp_rank_00_000/model_optim_rng.pt
+load /cognitive_comp/ccnl_common_data/large/sft_audio_data/output/text/20250704/train/checkpoints/checkpoint/xpo-mcore-qwen2.5-7B-lr-2e-7-minlr-1e-7-bs-6-gbs-24-seqlen-4096-pr-bf16-tp-2-pp-4-cp-1-ac-false-do-true-sp-true-ti-12000-wi-66/iter_0001000/mp_rank_00_001/model_optim_rng.pt
+load /cognitive_comp/ccnl_common_data/large/sft_audio_data/output/text/20250704/train/checkpoints/checkpoint/xpo-mcore-qwen2.5-7B-lr-2e-7-minlr-1e-7-bs-6-gbs-24-seqlen-4096-pr-bf16-tp-2-pp-4-cp-1-ac-false-do-true-sp-true-ti-12000-wi-66/iter_0001000/mp_rank_00_002/model_optim_rng.pt
+load /cognitive_comp/ccnl_common_data/large/sft_audio_data/output/text/20250704/train/checkpoints/checkpoint/xpo-mcore-qwen2.5-7B-lr-2e-7-minlr-1e-7-bs-6-gbs-24-seqlen-4096-pr-bf16-tp-2-pp-4-cp-1-ac-false-do-true-sp-true-ti-12000-wi-66/iter_0001000/mp_rank_00_003/model_optim_rng.pt
+Loading megatron params:  50%|█████     | 1/2 [00:07<00:07,  7.31s/it]load /cognitive_comp/ccnl_common_data/large/sft_audio_data/output/text/20250704/train/checkpoints/checkpoint/xpo-mcore-qwen2.5-7B-lr-2e-7-minlr-1e-7-bs-6-gbs-24-seqlen-4096-pr-bf16-tp-2-pp-4-cp-1-ac-false-do-true-sp-true-ti-12000-wi-66/iter_0001000/mp_rank_01_000/model_optim_rng.pt
+load /cognitive_comp/ccnl_common_data/large/sft_audio_data/output/text/20250704/train/checkpoints/checkpoint/xpo-mcore-qwen2.5-7B-lr-2e-7-minlr-1e-7-bs-6-gbs-24-seqlen-4096-pr-bf16-tp-2-pp-4-cp-1-ac-false-do-true-sp-true-ti-12000-wi-66/iter_0001000/mp_rank_01_001/model_optim_rng.pt
+load /cognitive_comp/ccnl_common_data/large/sft_audio_data/output/text/20250704/train/checkpoints/checkpoint/xpo-mcore-qwen2.5-7B-lr-2e-7-minlr-1e-7-bs-6-gbs-24-seqlen-4096-pr-bf16-tp-2-pp-4-cp-1-ac-false-do-true-sp-true-ti-12000-wi-66/iter_0001000/mp_rank_01_002/model_optim_rng.pt
+load /cognitive_comp/ccnl_common_data/large/sft_audio_data/output/text/20250704/train/checkpoints/checkpoint/xpo-mcore-qwen2.5-7B-lr-2e-7-minlr-1e-7-bs-6-gbs-24-seqlen-4096-pr-bf16-tp-2-pp-4-cp-1-ac-false-do-true-sp-true-ti-12000-wi-66/iter_0001000/mp_rank_01_003/model_optim_rng.pt
+Loading megatron params: 100%|██████████| 2/2 [00:14<00:00,  7.48s/it]Loading megatron params: 100%|██████████| 2/2 [00:14<00:00,  7.45s/it]
+Converting megatron params:   0%|          | 0/340 [00:00<?, ?it/s]Converting megatron params:   3%|▎         | 10/340 [00:00<00:03, 98.63it/s]Converting megatron params:  14%|█▍        | 48/340 [00:00<00:01, 255.15it/s]Converting megatron params:  26%|██▌       | 87/340 [00:00<00:00, 314.82it/s]Converting megatron params:  36%|███▌      | 123/340 [00:00<00:00, 330.66it/s]Converting megatron params:  46%|████▌     | 157/340 [00:00<00:00, 331.66it/s]Converting megatron params:  56%|█████▋    | 192/340 [00:00<00:00, 336.49it/s]Converting megatron params:  67%|██████▋   | 228/340 [00:00<00:00, 343.07it/s]Converting megatron params:  78%|███████▊  | 264/340 [00:00<00:00, 346.31it/s]Converting megatron params:  88%|████████▊ | 300/340 [00:00<00:00, 349.25it/s]Converting megatron params:  99%|█████████▉| 336/340 [00:01<00:00, 351.40it/s]Converting megatron params: 100%|██████████| 340/340 [00:01<00:00, 311.07it/s]
+Loading megatron params, done.
+Converting float to half-float...
+Precision converting done.
+Megatron word embedding size: torch.Size([152064, 3584])
+HF word embedding size: torch.Size([152064, 3584])
+Converting Layers: 0it [00:00, ?it/s]Converting Layers: 1it [00:01,  1.01s/it]Converting Layers: 2it [00:02,  1.26s/it]Converting Layers: 3it [00:03,  1.04it/s]Converting Layers: 4it [00:03,  1.42it/s]Converting Layers: 5it [00:04,  1.46it/s]Converting Layers: 6it [00:04,  1.65it/s]Converting Layers: 7it [00:04,  1.95it/s]Converting Layers: 8it [00:05,  2.23it/s]Converting Layers: 9it [00:05,  2.47it/s]Converting Layers: 10it [00:05,  2.62it/s]Converting Layers: 11it [00:06,  1.77it/s]Converting Layers: 12it [00:07,  2.04it/s]Converting Layers: 13it [00:07,  2.02it/s]Converting Layers: 14it [00:08,  1.44it/s]Converting Layers: 15it [00:08,  1.74it/s]Converting Layers: 16it [00:09,  1.60it/s]Converting Layers: 17it [00:10,  1.87it/s]Converting Layers: 18it [00:10,  2.15it/s]Converting Layers: 19it [00:10,  2.12it/s]Converting Layers: 20it [00:11,  1.73it/s]Converting Layers: 21it [00:12,  1.74it/s]Converting Layers: 22it [00:12,  1.90it/s]Converting Layers: 23it [00:12,  2.16it/s]Converting Layers: 24it [00:13,  2.45it/s]Converting Layers: 25it [00:13,  2.63it/s]Converting Layers: 26it [00:14,  2.12it/s]Converting Layers: 27it [00:14,  2.41it/s]Converting Layers: 28it [00:14,  2.63it/s]Converting Layers: 28it [00:14,  1.89it/s]
+Note that `shard_checkpoint` is deprecated and will be removed in v4.44. We recommend you using split_torch_state_dict_into_shards from huggingface_hub library
+huggingface model is save to /cognitive_comp/ccnl_common_data/large/sft_audio_data/output/text/20250704/train/checkpoints/checkpoint/xpo-mcore-qwen2.5-7B-lr-2e-7-minlr-1e-7-bs-6-gbs-24-seqlen-4096-pr-bf16-tp-2-pp-4-cp-1-ac-false-do-true-sp-true-ti-12000-wi-66/iter_0001000_hf/pytorch_model-00001-of-00004.bin
+huggingface model is save to /cognitive_comp/ccnl_common_data/large/sft_audio_data/output/text/20250704/train/checkpoints/checkpoint/xpo-mcore-qwen2.5-7B-lr-2e-7-minlr-1e-7-bs-6-gbs-24-seqlen-4096-pr-bf16-tp-2-pp-4-cp-1-ac-false-do-true-sp-true-ti-12000-wi-66/iter_0001000_hf/pytorch_model-00002-of-00004.bin
+huggingface model is save to /cognitive_comp/ccnl_common_data/large/sft_audio_data/output/text/20250704/train/checkpoints/checkpoint/xpo-mcore-qwen2.5-7B-lr-2e-7-minlr-1e-7-bs-6-gbs-24-seqlen-4096-pr-bf16-tp-2-pp-4-cp-1-ac-false-do-true-sp-true-ti-12000-wi-66/iter_0001000_hf/pytorch_model-00003-of-00004.bin
+huggingface model is save to /cognitive_comp/ccnl_common_data/large/sft_audio_data/output/text/20250704/train/checkpoints/checkpoint/xpo-mcore-qwen2.5-7B-lr-2e-7-minlr-1e-7-bs-6-gbs-24-seqlen-4096-pr-bf16-tp-2-pp-4-cp-1-ac-false-do-true-sp-true-ti-12000-wi-66/iter_0001000_hf/pytorch_model-00004-of-00004.bin
+The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 4 checkpoint shards. You can find where each parameters has been saved in the index located at /cognitive_comp/ccnl_common_data/large/sft_audio_data/output/text/20250704/train/checkpoints/checkpoint/xpo-mcore-qwen2.5-7B-lr-2e-7-minlr-1e-7-bs-6-gbs-24-seqlen-4096-pr-bf16-tp-2-pp-4-cp-1-ac-false-do-true-sp-true-ti-12000-wi-66/iter_0001000_hf/pytorch_model.bin.index.json.
+[rank0]:[W716 10:42:50.192501564 ProcessGroupNCCL.cpp:1187] Warning: WARNING: process group has NOT been destroyed before we destruct ProcessGroupNCCL. On normal program exit, the application should call destroy_process_group to ensure that any pending NCCL operations have finished in this process. In rare cases this process can exit before this point and block the progress of another member of the process group. This constraint has always been present,  but this warning has only been added since PyTorch 2.4 (function operator())
+1 min 21 sec

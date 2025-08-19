@@ -12,11 +12,11 @@
     <a href="https://huggingface.co/IDEA-Emdoor/UniTTS-mixed-v0.1" style="color:#FFD700">Hugging Face Model</a>  |
     <a href="https://github.com/IDEA-Emdoor-Lab/LPO" style="color:gray">Code</a>
      <p>
-        <img src="figure/idea_capture.png" alt="Institution 1" style="width: 200px; height: 60px;">
+        <img src="figures/idea_capture.png" alt="Institution 1" style="width: 200px; height: 60px;">
     </p>
      <p>
-        <img src="figure/yidao_logo.png" alt="Institution 2" style="width: 200px; height: 60px;">
-        <img src="figure/yijiayiban.png" alt="Institution 3" style="width: 200px; height: 60px;">
+        <img src="figures/yidao_logo.png" alt="Institution 2" style="width: 200px; height: 60px;">
+        <img src="figures/yijiayiban.png" alt="Institution 3" style="width: 200px; height: 60px;">
     </p>
 </div>
 

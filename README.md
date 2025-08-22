@@ -8,8 +8,7 @@
     <p>
     </p>
     </p>
-    <a href="https" style="color:red">Paper</a> |  
-    <a href="https://huggingface.co/IDEA-Emdoor/UniTTS-mixed-v0.1" style="color:#FFD700">Hugging Face Model</a>  |
+    <a href="https://arxiv.org/pdf/2508.14947" style="color:red">Paper</a>  |
     <a href="https://github.com/IDEA-Emdoor-Lab/LPO" style="color:gray">Code</a>
      <p>
         <img src="figures/idea_capture.png" alt="Institution 1" style="width: 200px; height: 60px;">
@@ -32,8 +31,9 @@ we propose Linear Preference Optimization (LPO), a novel alignment framework fea
 We conducted comprehensive experiments across general text tasks, mathematics-specific domains, and text-to-speech (TTS) systems. The results demonstrate consistent improvements across all models. Below are the corresponding trained open-source models for each scenario.
 |Model Version| Huggingface |  Application |
 |-----------------------|---------|-----------------------------------|
-| General Text Task | [HuggingFace](https://huggingface.co/IDEA-Emdoor/Qwen2.5-7B-ExtVocab) | Text Q&A |
-| Math Model   | [HuggingFace](https://huggingface.co/IDEA-Emdoor/UniTTS-mixed-v0.1)   | Math Q&A |
+| General Text Task on perference dataset| [HuggingFace](https://huggingface.co/IDEA-Emdoor/Qwen2.5-7B-LPO-General-Perference) | Text Q&A |
+| General Text Task on instruct dataset | [HuggingFace](https://huggingface.co/IDEA-Emdoor/Qwen2.5-7B-LPO-General-Instruct) | Text Q&A |
+| Math Model   | [HuggingFace](https://huggingface.co/IDEA-Emdoor/Qwen2.5-7B-LPO-Math)   | Math Q&A |
 | TTS Model   | [HuggingFace](https://huggingface.co/IDEA-Emdoor/UniTTS-mixed-v0.1)   | Chinese TTS infernce/text dialogue/long-cot |
 
 ## Install
@@ -92,35 +92,24 @@ LPO achieves a score of 88.86 on the GSM8K benchmark, representing a 4.71-point 
 
 ### RESULTS ON TEXT-TO-SPEECH TASKS
 The LPO algorithm demonstrates significant improvements in emotional expressiveness and fidelity compared to the SFT model, while exhibiting a slight decrease in stability. This outcome validates the effectiveness of the LPO algorithm in the field of speech generation.
-![alt text](image.png)
+![alt text](figures/table6.png)
 
 
 ## Citation
 ```
-@misc{wang2025unittsendtoendttsdecoupling,
-      title={UniTTS: An end-to-end TTS system without decoupling of acoustic and semantic information}, 
-      author={Rui Wang and Qianguo Sun and Tianrong Chen and Zhiyun Zeng and Junlong Wu and Jiaxing Zhang},
+@misc{wang2025linearpreferenceoptimizationdecoupled,
+      title={Linear Preference Optimization: Decoupled Gradient Control via Absolute Regularization}, 
+      author={Rui Wang and Qianguo Sun and Chao Song and Junlong Wu and Tianrong Chen and Zhiyun Zeng and Yu Li},
       year={2025},
-      eprint={2505.17426},
+      eprint={2508.14947},
       archivePrefix={arXiv},
-      primaryClass={cs.SD},
-      url={https://arxiv.org/abs/2505.17426}, 
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2508.14947}, 
 }
 ```
 
 
-## Disclaimer
-
-Our model provides zero-shot voice cloning only for academic research purposes. We encourage the community to uphold safety and ethical principles in AI research and applications.
-
-Important Notes:
-
-- Compliance with the model's open-source license is mandatory.
-
-- Unauthorized voice replication applications are strictly prohibited.
-
-- Developers bear no responsibility for any misuse of this model.
 
 
 ## License
-<a href="https://arxiv.org/abs/2505.17426">UniTTS: An end-to-end TTS system without decoupling of acoustic and semantic information</a> © 2025 by <a href="https://creativecommons.org">Rui Wang, Qianguo Sun, Tianrong Chen, Zhiyun Zeng, Junlong Wu, Jiaxing Zhang</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+<a href="https://arxiv.org/abs/2508.14947">Linear Preference Optimization: Decoupled Gradient Control via Absolute Regularization</a> © 2025 by <a href="https://creativecommons.org">Rui Wang, Qianguo Sun, Chao Song, Junlong Wu, Tianrong Chen, Zhiyun Zeng, Yu Li</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" style="max-width: 1em;max-height:1em;margin-left: .2em;">

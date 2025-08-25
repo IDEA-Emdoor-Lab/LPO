@@ -35,6 +35,7 @@ We conducted comprehensive experiments across general text tasks, mathematics-sp
 | General Text Task on instruct dataset | [HuggingFace](https://huggingface.co/IDEA-Emdoor/Qwen2.5-7B-LPO-General-Instruct) | Text Q&A |
 | Math Model   | [HuggingFace](https://huggingface.co/IDEA-Emdoor/Qwen2.5-7B-LPO-Math)   | Math Q&A |
 | TTS Model   | [HuggingFace](https://huggingface.co/IDEA-Emdoor/UniTTS-mixed-v0.1)   | Chinese TTS infernce/text dialogue/long-cot |
+| ASR Model | [HuggingFace](https://huggingface.co/IDEA-Emdoor/Qwen2.5-7B-LPO-ASR) | ASR |
 
 ## Install
 **Clone and Install**
@@ -73,7 +74,7 @@ sbatch run_mcore_qwen_xpo.sh
 
 
 ## Evaluation
-To validate the effectiveness of the algorithm, comprehensive experiments were conducted in three domains: general text tasks, domain-specific mathematical text tasks, and TTS speech generation tasks.
+To validate the effectiveness of the algorithm, comprehensive experiments were conducted in three domains: general text tasks, domain-specific mathematical text tasks, TTS speech generation tasks and ASR tasks.
 ### RESULTS ON GENERAL TASKS
 
 During the alignment phase, we validated the algorithm's robustness using both noisy training data and high-quality preference training data.
@@ -94,6 +95,10 @@ LPO achieves a score of 88.86 on the GSM8K benchmark, representing a 4.71-point 
 The LPO algorithm demonstrates significant improvements in emotional expressiveness and fidelity compared to the SFT model, while exhibiting a slight decrease in stability. This outcome validates the effectiveness of the LPO algorithm in the field of speech generation.
 ![alt text](figures/table6.png)
 
+### RESULTS ON ASR TASKS
+
+The LPO algorithm shows that although constrained by the base model's fundamental capabilities, our model did not achieve state-of-the-art (SOTA) performance during SFT; however, the LPO algorithm effectively reduced the speech recognition error rate.
+![alt text](figures/table7.jpg)
 
 ## Citation
 ```
